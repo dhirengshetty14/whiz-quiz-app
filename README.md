@@ -14,7 +14,7 @@ WhizQuiz isn't just another quiz app. Here's what makes it tick:
 - **🎯 10 Diverse Topics**: From Sports to Science, Technology to Travel - there's something for everyone
 - **📱 Responsive Design**: Works seamlessly on phones, tablets, and desktops (because who doesn't quiz on mobile?)
 - **🏆 Live Leaderboards**: See how you stack up against friends in real-time
-- **🔗 Easy Sharing**: One-click share links that actually work (yes, even the clipboard stuff!)
+- **🔗 Easy Sharing**: One-click share links that actually work
 
 ## 🛠️ Tech Stack
 
