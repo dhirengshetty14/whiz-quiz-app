@@ -3,7 +3,7 @@
 
 > **Turn any topic into an engaging quiz experience with the power of AI!**
 
-Hey there! 👋 Welcome to WhizQuiz - a real-time multiplayer quiz platform that I built because honestly, I was tired of boring static quizzes. This thing uses AI to generate fresh questions on the fly, supports multiple players in real-time, and actually looks pretty good too (if I do say so myself).
+Hey there! 👋 Welcome to WhizQuiz - a real-time multiplayer quiz platform that I built because honestly, I was tired of boring static quizzes. This thing uses AI to generate fresh questions on the fly and supports multiple players in real-time.
 
 ## 🚀 What Makes This Special?
 
@@ -24,19 +24,12 @@ I went with the modern stack approach here - no regrets:
 - **Next.js 14** - App Router, because the old way was getting stale
 - **TypeScript** - Life's too short for runtime errors
 - **Tailwind CSS** - Utility-first styling that just works
-- **Radix UI** - Accessible components that don't fight you
-- **Framer Motion** - Smooth animations that feel natural
-- **React Hook Form** - Form handling without the headaches
 
 ### Backend
 - **PostgreSQL** - Reliable, powerful, and plays nice with everything
 - **Prisma ORM** - Database queries that actually make sense
 - **LLM API Integration** - The secret sauce for question generation
 
-### Deployment & Tools
-- **Vercel-Ready** - Built with deployment in mind
-- **ESLint + Prettier** - Code stays clean automatically
-- **TypeScript** - Did I mention type safety? Yeah, it's everywhere
 
 ## 🏃‍♂️ Quick Start
 
@@ -69,8 +62,8 @@ Before you dive in, make sure you have:
    # Database
    DATABASE_URL="postgresql://username:password@localhost:5432/whizquiz"
    
-   # AI API (contact me for access)
-   ABACUSAI_API_KEY="your-api-key-here"
+   # AI API
+   LLM_API_KEY="your-api-key-here"
    
    # NextAuth (generate with: openssl rand -base64 32)
    NEXTAUTH_SECRET="your-secret-key-here"
@@ -135,7 +128,7 @@ whizquiz/
 │   │   ├── quiz/[code]/       # Dynamic quiz routes
 │   │   └── globals.css        # Global styles
 │   ├── components/            # Reusable components
-│   │   ├── ui/               # Radix UI components
+│   │   ├── ui/               # UI components
 │   │   ├── quiz-question.tsx  # Question display
 │   │   └── quiz-timer.tsx     # Timer component
 │   ├── lib/                   # Utilities and types
@@ -156,36 +149,6 @@ I wanted WhizQuiz to feel modern but not intimidating. The design system uses:
 - **Smooth animations** that enhance (not distract from) the experience
 - **Mobile-first approach** because that's where people actually use apps
 
-## 🔧 Development
-
-### Running Tests
-```bash
-# Type checking
-yarn build
-
-# Linting
-yarn lint
-```
-
-### Database Management
-```bash
-# View your data
-npx prisma studio
-
-# Reset database (careful!)
-npx prisma migrate reset
-
-# Generate new migration
-npx prisma migrate dev --name your-migration-name
-```
-
-### Environment Setup
-The app expects these environment variables:
-- `DATABASE_URL`: PostgreSQL connection string
-- `ABACUSAI_API_KEY`: For AI question generation
-- `NEXTAUTH_SECRET`: For session management
-- `NEXTAUTH_URL`: Your app's URL
-
 ## 🚨 Troubleshooting
 
 ### Common Issues
@@ -196,52 +159,14 @@ The app expects these environment variables:
 - Verify database credentials
 
 **"Questions aren't generating"**
-- Verify your `ABACUSAI_API_KEY` is correct
+- Verify your `LLM_API_KEY` is correct
 - Check network connectivity
 - Look at the browser console for error messages
 
-**"Real-time features aren't working"**
-- Make sure you're not blocking WebSocket connections
-- Check if you're behind a strict firewall
-- Try refreshing the page
-
-**"Clipboard sharing doesn't work"**
-- This is usually a browser security thing
-- Try using HTTPS in production
-- The app has fallbacks for this scenario
-
-### Getting Help
-- Check the GitHub issues first
-- Include your error messages and browser info
-- Describe what you were trying to do when it broke
-
-## 🤝 Contributing
-
-I'd love your help making WhizQuiz even better! Here's how:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Make your changes** (and test them!)
-4. **Commit with a clear message**: `git commit -m "Add amazing feature"`
-5. **Push to your branch**: `git push origin feature/amazing-feature`
-6. **Open a Pull Request**
-
-### What I'm Looking For
-- **Bug fixes** (there are always bugs)
-- **New quiz topics** (expand the variety!)
-- **UI improvements** (make it even prettier)
-- **Performance optimizations** (faster is better)
-- **Better mobile experience** (mobile-first mindset)
-
-### Code Style
-- Use TypeScript everywhere
-- Follow the existing Prettier config
-- Write meaningful commit messages
-- Test your changes locally first
 
 ## 🎯 Future Ideas
 
-Some things I'm thinking about (contributions welcome!):
+Some things I'm thinking about:
 - **Custom quiz creation** - Let users add their own questions
 - **Team mode** - Quiz with teams instead of individuals
 - **Image questions** - Support for visual quiz questions
@@ -253,25 +178,6 @@ Some things I'm thinking about (contributions welcome!):
 
 This project is MIT licensed. See the [LICENSE](LICENSE) file for details.
 
-Basically: use it, modify it, share it, just don't blame me if something breaks! 😄
 
-## 🙏 Acknowledgments
-
-- **Radix UI** for the component primitives
-- **Vercel** for making deployment actually enjoyable
-- **The TypeScript team** for saving us from JavaScript chaos
-- **Everyone who beta tested** and found all the bugs I missed
-
-## 📬 Contact
-
-Got questions? Found a bug? Want to collaborate?
-
-- **GitHub Issues**: [Report bugs or request features](https://github.com/yourusername/whizquiz/issues)
-- **Email**: your.email@example.com
-- **Twitter**: [@yourusername](https://twitter.com/yourusername)
-
----
-
-**Built with ❤️ and way too much coffee** ☕
-
-P.S. - If you use this for your next party or team building event, I'd love to hear about it! Send me a screenshot or something - it totally makes my day when I see people actually using stuff I built.
+- **GitHub Issues**: [Report bugs or request features](https://github.com/dhirengshetty14/whizquiz/issues)
+- **Email**: dhirengshetty@example.com
