@@ -1,0 +1,277 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 213 94% 68%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 213 94% 68%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 213 94% 68%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 213 94% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-medium;
+  }
+}
+
+/* WhizQuiz Custom Animations */
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s infinite;
+}
+
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(-2px);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-count-up {
+  animation: countUp 1s ease-out;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-wiggle {
+  animation: wiggle 0.8s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.5s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-whiz {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+/* Custom button styles */
+.btn-whiz {
+  @apply bg-gradient-whiz text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105;
+}
+
+.btn-accent {
+  @apply bg-gradient-accent text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105;
+}
+
+/* Custom card styles */
+.card-whiz {
+  @apply bg-white/70 backdrop-blur-sm border border-white/20 shadow-xl rounded-2xl transition-all duration-300 hover:shadow-2xl hover:bg-white/80;
+}
+
+.card-accent {
+  @apply bg-gradient-to-br from-orange-50 to-red-50 border border-orange-200 shadow-lg rounded-2xl transition-all duration-300 hover:shadow-xl;
+}
+
+/* Topic card styles */
+.topic-card {
+  @apply bg-white/60 backdrop-blur-sm border border-white/30 rounded-xl p-4 cursor-pointer transition-all duration-200 hover:bg-white/80 hover:border-blue-200 hover:shadow-lg transform hover:scale-105;
+}
+
+.topic-card.selected {
+  @apply bg-gradient-whiz text-white border-blue-500 shadow-lg scale-105;
+}
+
+/* Answer button styles */
+.answer-btn {
+  @apply bg-white/60 backdrop-blur-sm border border-gray-200 rounded-xl p-4 cursor-pointer transition-all duration-200 hover:bg-white/80 hover:border-blue-200 hover:shadow-md transform hover:scale-105;
+}
+
+.answer-btn.selected {
+  @apply bg-gradient-whiz text-white border-blue-500 shadow-lg scale-105;
+}
+
+.answer-btn.correct {
+  @apply bg-gradient-success text-white border-green-500 shadow-lg;
+}
+
+.answer-btn.incorrect {
+  @apply bg-gradient-to-r from-red-500 to-red-600 text-white border-red-500 shadow-lg;
+}
+
+/* Utility classes */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.glass-effect {
+  @apply bg-white/20 backdrop-blur-md border border-white/30;
+}
+
+.hover-lift {
+  @apply transition-all duration-200 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .btn-whiz, .btn-accent {
+    @apply py-2 px-4 text-sm;
+  }
+  
+  .card-whiz {
+    @apply rounded-xl;
+  }
+  
+  .topic-card {
+    @apply p-3;
+  }
+}
