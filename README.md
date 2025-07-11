@@ -12,7 +12,7 @@ WhizQuiz isn't just another quiz app. Here's what makes it tick:
 - **🤖 AI-Powered Questions**: No more manually creating questions! Just pick a topic and let the AI cook up some brain-teasers
 - **⚡ Real-Time Multiplayer**: Everyone plays together - no waiting, no lag, just pure quiz action
 - **🎯 10 Diverse Topics**: From Sports to Science, Technology to Travel - there's something for everyone
-- **📱 Responsive Design**: Works seamlessly on phones, tablets, and desktops (because who doesn't quiz on mobile?)
+- **📱 Responsive Design**: Works seamlessly on phones, tablets, and desktops 
 - **🏆 Live Leaderboards**: See how you stack up against friends in real-time
 - **🔗 Easy Sharing**: One-click share links that actually work
 
