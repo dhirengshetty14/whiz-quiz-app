@@ -26,6 +26,7 @@ I went with the modern stack approach here - no regrets:
 - **Tailwind CSS** - Utility-first styling that just works
 
 ### Backend
+- **Node.js** - The asynchronous powerhouse for our real-time APIs and game logic.
 - **PostgreSQL** - Reliable, powerful, and plays nice with everything
 - **Prisma ORM** - Database queries that actually make sense
 - **LLM API Integration** - The secret sauce for question generation
