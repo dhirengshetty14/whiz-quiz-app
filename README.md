@@ -33,7 +33,7 @@ I went with the modern stack approach here - no regrets:
 ## 🧠 Algorithms and Data Structures Used
 To ensure WhizQuiz is efficient and performs well, especially in a real-time multiplayer environment, several key computer science algorithms and data structures are used:
 
-#### Max-Heap for the Live Leaderboard
+### Max-Heap for the Live Leaderboard
 
 How it's used: A Max-Heap (often implemented as a Priority Queue) is perfect for managing the live leaderboard. The player with the highest score is always at the root, allowing for constant-time retrieval of the top player. When scores are updated, the heap is re-organized in logarithmic time (O(log n)), which is much faster than re-sorting a list every time a score changes.
 
