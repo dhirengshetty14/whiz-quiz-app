@@ -1,37 +1,36 @@
 
-# 🧠 WhizQuiz - AI-Powered Multiplayer Quiz Platform
+# WhizQuiz - AI-Powered Multiplayer Quiz Platform
 
-> **Turn any topic into an engaging quiz experience with the power of AI!**
+> WhizQuiz is a full-stack web application that leverages Large Language Models (LLMs) to dynamically generate quizzes on various topics. It features a real-time, event-driven architecture to support multiple concurrent players in a live game session. This project was built to explore the integration of generative AI within a scalable, low-latency multiplayer environment.
 
-Hey there! 👋 Welcome to WhizQuiz - a real-time multiplayer quiz platform that I built because honestly, I was tired of boring static quizzes. This thing uses AI to generate fresh questions on the fly and supports multiple players in real-time.
+## Core Features
+- **Dynamic Quiz Generation**: Utilizes the OpenAI API (via LangChain) to generate quiz questions and answers on demand for 10 diverse topics.
 
-## 🚀 What Makes This Special?
+- **Real-Time Multiplayer Sessions**: Supports 1000+ concurrent users with a WebSocket-based, event-driven backend for synchronized game state and minimal latency.
 
-WhizQuiz isn't just another quiz app. Here's what makes it tick:
+- **Live Leaderboard**: Employs a Max-Heap data structure for efficient, real-time updates to the player leaderboard, ensuring O(log n) complexity on score changes.
 
-- **🤖 AI-Powered Questions**: No more manually creating questions! Just pick a topic and let the AI cook up some brain-teasers
-- **⚡ Real-Time Multiplayer**: Everyone plays together - no waiting, no lag, just pure quiz action
-- **🎯 10 Diverse Topics**: From Sports to Science, Technology to Travel - there's something for everyone
-- **📱 Responsive Design**: Works seamlessly on phones, tablets, and desktops 
-- **🏆 Live Leaderboards**: See how you stack up against friends in real-time
-- **🔗 Easy Sharing**: One-click share links that actually work
+- **Responsive UI**: A mobile-first, responsive interface built with Next.js 14 and Tailwind CSS.
 
-## 🛠️ Tech Stack
+- **Secure Session Management**: Manages active quiz rooms using a Hash Map for O(1) average time complexity on lookups and uses unique 6-character room codes for easy sharing.
 
-I went with the modern stack approach here - no regrets:
+## Tech Stack
+
+The application is built using a modern, type-safe stack designed for performance and scalability.
 
 ### Frontend
-- **Next.js 14** - App Router, because the old way was getting stale
-- **TypeScript** - Life's too short for runtime errors
-- **Tailwind CSS** - Utility-first styling that just works
+- **Next.js 14** - App Router
+- **TypeScript** - Language
+- **Tailwind CSS** - Styling
 
 ### Backend
 - **Node.js** - The asynchronous powerhouse for our real-time APIs and game logic
-- **PostgreSQL** - Reliable, powerful, and plays nice with everything
-- **Prisma ORM** - Database queries that actually make sense
-- **LLM API Integration** - The secret sauce for question generation
+- **PostgreSQL** - Reliable and powerful Database
+- **Prisma ORM** 
+- **LLM API Integration** - LangChain.js to interface with LLM APIs for content generation.
+- **WebSockets** - Real-Time Communication, live game logic and player synchronization.
 
-## 🧠 Algorithms and Data Structures Used
+## Algorithms and Data Structures Used
 To ensure WhizQuiz is efficient and performs well, especially in a real-time multiplayer environment, several key computer science algorithms and data structures are used:
 
 ### Max-Heap for the Live Leaderboard
@@ -47,7 +46,7 @@ How it's used: To ensure fairness and a unique experience each time a quiz is pl
 How it's used: A Hash Map (or Dictionary) is essential for managing all active quiz rooms. The unique 6-character room code acts as the key, and the value is an object containing all session data (players, scores, current question, etc.). This provides near-instant (O(1) average time) lookups, insertions, and deletions, making it highly efficient to manage many simultaneous quiz sessions.
 
 
-## 🏃‍♂️ Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -105,7 +104,7 @@ Before you dive in, make sure you have:
 
 That's it! Head over to `http://localhost:3000` and start creating quizzes! 🎉
 
-## 📖 How to Use
+##  How to Use
 
 ### Creating a Quiz
 1. Click "Create Quiz" on the homepage
@@ -128,7 +127,7 @@ That's it! Head over to `http://localhost:3000` and start creating quizzes! 🎉
 - **Mobile-friendly**: The UI adapts to your screen size, so quiz anywhere
 - **Real-time updates**: Everything syncs automatically - no need to refresh
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -143,7 +142,7 @@ That's it! Head over to `http://localhost:3000` and start creating quizzes! 🎉
 - Look at the browser console for error messages
 
 
-## 🎯 Future Ideas
+## Future Ideas
 
 Some things I'm thinking about:
 - **Custom quiz creation** - Let users add their own questions
@@ -153,7 +152,7 @@ Some things I'm thinking about:
 - **Difficulty levels** - Easy, medium, hard question variants
 - **Time pressure modes** - Different timing challenges
 
-## 📄 License
+## License
 
 This project is MIT licensed. See the [LICENSE](LICENSE) file for details.
 
